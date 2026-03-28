@@ -15,7 +15,9 @@ An end-to-end autonomous AI agent that manages retail operations for **ZAMSH**, 
 The system supports three user roles — **Guest**, **Customer**, and **Manager** — each with deterministic permission enforcement controlling which tools and operations are available.
 
 <p align="center">
-  <img src="ui.png" alt="ShoeOps Agent UI" width="700"/>
+  
+  <img width="500" height="300" alt="UI" src="https://github.com/user-attachments/assets/a58bc154-c21c-4704-bb4a-0518db9b80f7" />
+
 </p>
 
 ---
