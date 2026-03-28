@@ -7,6 +7,8 @@
 **Team:**  Niv Meirovitz · Alon Achituv · Noa Ezri
 
 ---
+For watching our video demo of the agent [click here](https://www.youtube.com/watch?v=ijzfr5l4km4)
+---
 
 ## What We Built
 
@@ -34,15 +36,10 @@ Built on a **cyclic LangGraph state machine** with the following core nodes:
 - **Guardrail nodes** — Prevent uncontrolled free-text output or invalid tool/response mixing
 
 The graph supports **correction loops**: missing information routes back to the user for clarification, rejected HITL actions feed back as `ToolMessage` corrections, and read operations cycle through an evidence-collection path before returning to the executor.
-```
-__start__ → planner → planner_apply → executor
-                                        ├→ tools_read → evidence ──┐
-                                        ├→ critic → hitl → apply_write ──┐
-                                        ├→ plaintext_guardrail ──┐       │
-                                        └→ reject_mixed ─────────┤       │
-                                                                  ├→ formatter → finalize → __end__
-                                                       ask_user ←─┘
-```
+
+<p align="center">
+<img width="392" height="419" alt="Agent Flow Chart" src="https://github.com/user-attachments/assets/7edc83b4-aeca-449c-8f6a-598daf5ac1de" />
+</p>
 
 ---
 
@@ -112,4 +109,4 @@ LangSmith was used throughout for tracing and debugging agent execution flows.
 
 ## Contact
 
-**Niv Meirovitz** · **Noa Ezri** · **Alon Achituv** — [LinkedIn](https://www.linkedin.com/in/alon-achituv-551237bb/) · [Email](mailto:Achituv15@gmail.com) 
+**Alon Achituv** — [LinkedIn](https://www.linkedin.com/in/alon-achituv-551237bb/) · [Email](mailto:Achituv15@gmail.com) 
